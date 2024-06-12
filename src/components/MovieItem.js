@@ -39,7 +39,6 @@ function MovieItem({ match }) {
                         <div className="overview">
                             <h2>Overview</h2>
                             <p>{item.overview}</p>
-                            <a className="dlinks" target="_blank" rel="noreferrer" href={`https://thepiratebay10.org/search/${item.original_title}/1/99/0`}><i class="fas fa-download"></i></a>
                         </div>
                     </div>
                 </div>
