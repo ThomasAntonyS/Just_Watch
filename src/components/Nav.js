@@ -1,13 +1,14 @@
 import React from 'react'
 import '../App.css'
 import {Link} from 'react-router-dom'
+import Logo from '../image/Logo.png'
 
 function Nav() {
     return (
         <div>
             <nav>
                 <Link className='links'  to='/'>
-                    <h3>Movies</h3>
+                    <img src={Logo} height={25} width={100}></img>
                 </Link>
                 <ul className='nav-links'>
                     <div className='dropdown'>

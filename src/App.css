@@ -99,9 +99,6 @@ nav {
 .dropdown-content li:hover {
   background-color: #ddd;
 }
-.links:hover {
-  text-decoration: underline;
-}
 .discover,
 .trending {
   display: flex;
