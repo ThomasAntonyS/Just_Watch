@@ -1,8 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react'
+
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { ProfileContext } from '../Context/ProfileContext';
 
 function Movies() {
+    const {setWatchlist} = useContext(ProfileContext)
     const [movie, setmovie] = useState([]);
     const [page, setPage] = useState(1)
     const fetchMovie = async () => {
@@ -23,6 +25,15 @@ function Movies() {
             setPage(page - 1)
         }
     }
+
+    
+    function handleWatchlist(movie){
+    
+        setWatchlist(movie)
+    
+    }
+
+
     return (
         <div className='popular'>
             <div className="header">
@@ -39,6 +50,7 @@ function Movies() {
                                     <p className='ratings'><i className="fas fa-star"></i> {movie.vote_average}</p>
                                 </Link>
                                 <p>{movie.release_date}</p>
+                                <button onClick={handleWatchlist(movie)}>Add to WatchList</button>
                             </div>
                         ))                    
                     } 

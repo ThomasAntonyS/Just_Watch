@@ -11,6 +11,9 @@ function Nav() {
                     <img src={Logo} height={25} width={100}></img>
                 </Link>
                 <ul className='nav-links'>
+
+                <Link className='links' to='/profile'><li>Profile</li></Link>
+
                     <div className='dropdown'>
                         <li>Movies </li>
                         <div className="dropdown-content">
@@ -32,6 +35,8 @@ function Nav() {
                     <Link className='links' to='/trending'>
                         <li>Trending </li>
                     </Link>
+
+                    <Link className='links' to='/login'><li>SignIn/SignUp</li></Link>
                 </ul>
             </nav>
         </div>
