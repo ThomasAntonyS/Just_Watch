@@ -11,7 +11,7 @@ const ProfileContextProvider = ({ children }) => {
     <ProfileContext.Provider value={{user,setUser,watchlist,setWatchlist}}>
       {children}
     </ProfileContext.Provider>
-  );
+  ); 
 };
 
 export default ProfileContextProvider;

@@ -9,7 +9,7 @@ function Discover() {
     }, [])
 
     const fetchDiscover = async () => {
-        const data = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=c0921ec673b4e6941354543faa86678d&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1');
+        const data = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1');
         const movies = await data.json();
         setMovies(movies.results)
     }

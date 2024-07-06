@@ -7,7 +7,7 @@ function TvItem({ match }) {
         fetchItem()
     }, [match])
     const fetchItem = async () => {
-        const data = await fetch(`https://api.themoviedb.org/3/tv/${match.params.id}?api_key=c0921ec673b4e6941354543faa86678d&language=en-US`);
+        const data = await fetch(`https://api.themoviedb.org/3/tv/${match.params.id}?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US`);
         const tv = await data.json();
         setItem(tv)
     }

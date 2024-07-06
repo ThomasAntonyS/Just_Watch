@@ -9,7 +9,7 @@ function Trending() {
     }, [])
     
     const fetchTrending = async () => {
-        const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=c0921ec673b4e6941354543faa86678d&language=en-US&page=1');
+        const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&page=1');
         const trending = await data.json();
         setTrending(trending.results);
     }

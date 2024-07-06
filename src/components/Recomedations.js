@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 function Recomedations({ movieid }) {
     const [recommendation, setRecommendation] = useState([]);
     const fetchRecommendation = async () => {
-        const data = await fetch(`https://api.themoviedb.org/3/movie/${movieid}/similar?api_key=c0921ec673b4e6941354543faa86678d&language=en-US&page=1`)
+        const data = await fetch(`https://api.themoviedb.org/3/movie/${movieid}/similar?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&page=1`)
         const recommendation = await data.json()
         setRecommendation(recommendation.results)
         console.log(recommendation.results)

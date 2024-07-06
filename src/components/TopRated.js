@@ -6,7 +6,7 @@ function TopRated() {
     const [toprated, setTopRated] = useState([]);
     const [page, setPage] = useState(1)
     const fetchTopRated = async () => {
-        const data = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=c0921ec673b4e6941354543faa86678d&language=en-US&page=${page}`);
+        const data = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&page=${page}`);
         const toprated = await data.json();
         console.log(toprated)
         setPage(toprated.page)

@@ -6,7 +6,7 @@ function TvAir() {
     const [movie, setmovie] = useState([]);
     const [page, setPage] = useState(1)
     const fetchMovie = async () => {
-        const data = await fetch(`https://api.themoviedb.org/3/tv/on_the_air?api_key=c0921ec673b4e6941354543faa86678d&language=en-US&page=${page}`);
+        const data = await fetch(`https://api.themoviedb.org/3/tv/on_the_air?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&page=${page}`);
         const movie = await data.json();
         setPage(movie.page)
         setmovie(movie.results);

@@ -6,7 +6,7 @@ function Videos({moviedId}) {
         fetchVideo()
     }, [])
     const fetchVideo = async () => {
-        const data = await fetch(`https://api.themoviedb.org/3/movie/${moviedId}/videos?api_key=c0921ec673b4e6941354543faa86678d&language=en-US`);
+        const data = await fetch(`https://api.themoviedb.org/3/movie/${moviedId}/videos?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US`);
         const movie = await data.json();
         setVideos(movie.results)
     }

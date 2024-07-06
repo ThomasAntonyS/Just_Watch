@@ -6,7 +6,7 @@ function NowPlaying() {
     const [nowplaying, setNowPlaying] = useState([]);
     const [page, setPage] = useState(1)
     const fetchNowPlaying = async () => {
-        const data = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=c0921ec673b4e6941354543faa86678d&language=en-US&page=${page}`);
+        const data = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&page=${page}`);
         const nowplaying = await data.json();
         setPage(nowplaying.page)
         setNowPlaying(nowplaying.results);
