@@ -7,6 +7,8 @@ function Movies() {
     const {setWatchlist} = useContext(ProfileContext)
     const [movie, setmovie] = useState([]);
     const [page, setPage] = useState(1)
+    const [watchList_movies,setwatchList_movies] = useState([])
+
     const fetchMovie = async () => {
         const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=3a1152dfeee6a71281e7628c90d5e229&language=en-US&page=${page}`);
         const movie = await data.json();
@@ -27,9 +29,11 @@ function Movies() {
     }
 
     
-    function handleWatchlist(movie){
-    
-        setWatchlist(movie)
+    function handleWatchlist(movie,e){
+        e.preventDefault()
+        setwatchList_movies([...watchList_movies,movie])
+        console.log(watchList_movies);
+        setWatchlist(watchList_movies)
     
     }
 
@@ -50,7 +54,7 @@ function Movies() {
                                     <p className='ratings'><i className="fas fa-star"></i> {movie.vote_average}</p>
                                 </Link>
                                 <p>{movie.release_date}</p>
-                                <button onClick={handleWatchlist(movie)}>Add to WatchList</button>
+                                <button onClick={(e)=>handleWatchlist(movie,e)}>Add to WatchList</button>
                             </div>
                         ))                    
                     } 
